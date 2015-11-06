@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>简易日历arr数组、innerHTML、字符串 | Jack个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="&amp;lt;!--
+    body,ul,li,h2,p,h6{ margin: 0; padding: 0;}
+    ul li{ list-style: none;}
+    .clear:after {content:&quot;.&quot;;height:0;visibility:hidden;display:block;clear:both;}
+    .calendar{ width: 168px; padd">
+<meta property="og:type" content="article">
+<meta property="og:title" content="简易日历arr数组、innerHTML、字符串">
+<meta property="og:url" content="http://jack0624.github.io/2015/10/22/calendar-pages/index.html">
+<meta property="og:site_name" content="Jack个人博客">
+<meta property="og:description" content="&amp;lt;!--
+    body,ul,li,h2,p,h6{ margin: 0; padding: 0;}
+    ul li{ list-style: none;}
+    .clear:after {content:&quot;.&quot;;height:0;visibility:hidden;display:block;clear:both;}
+    .calendar{ width: 168px; padd">
+<meta property="og:updated_time" content="2015-10-28T12:34:11.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="简易日历arr数组、innerHTML、字符串">
+<meta name="twitter:description" content="&amp;lt;!--
+    body,ul,li,h2,p,h6{ margin: 0; padding: 0;}
+    ul li{ list-style: none;}
+    .clear:after {content:&quot;.&quot;;height:0;visibility:hidden;display:block;clear:both;}
+    .calendar{ width: 168px; padd">
+  
+    <link rel="alternative" href="/atom.xml" title="Jack个人博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <!--百度统计-->
+  
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="null" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Jack Wang</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">只要有信心，人永远不会挫败！</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags">随笔</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/jack0624" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/175apple" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/Javascript/" style="font-size: 15px;">Javascript</a> <a href="/tags/arr数组-字符串/" style="font-size: 10px;">arr数组/字符串</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/for/" style="font-size: 15px;">for</a> <a href="/tags/get/" style="font-size: 10px;">get</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/post/" style="font-size: 10px;">post</a> <a href="/tags/server/" style="font-size: 10px;">server</a> <a href="/tags/开发语言/" style="font-size: 10px;">开发语言</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Jack Wang</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="null" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Jack Wang</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">只要有信心，人永远不会挫败！</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags">随笔</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/jack0624" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/175apple" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-calendar-pages" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/10/22/calendar-pages/" class="article-date">
+  	<time datetime="2015-10-22T09:16:34.000Z" itemprop="datePublished">2015-10-22</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      简易日历arr数组、innerHTML、字符串
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/arr数组-字符串/">arr数组/字符串</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!--<style type="text/css">
+    body,ul,li,h2,p,h6{ margin: 0; padding: 0;}
+    ul li{ list-style: none;}
+    .clear:after {content:".";height:0;visibility:hidden;display:block;clear:both;}
+    .calendar{ width: 168px; padding: 10px; background: #efefef; border: 1px solid #d9d9d9;}
+    .calendar .active{ background: red;}
+    .calendar ul li{ float: left;border:1px solid #d2d2d2; background:#d6d5d5; width: 50px; height: 50px; margin: 2px; text-align: center; vertical-align: top; line-height: 16px; cursor:pointer; }
+    .calendar ul li h1{font-size: 18px; font-weight: weight; height: 12px; }
+    .calendar ul li p{ font-size: 12px;}
+    .txt{ background: #fff;}
+    .txt h6{ line-height: 22px; font-size: 14px;}
+    .txt p{ font-size: 12px;}
+</style>
+-->
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">＃实现思路</span><br><span class="line">－－类似选项卡，只是下面直邮一个div  －－innerHTML 的使用</span><br><span class="line">＃数组定义</span><br><span class="line">－－arr＝[a,b,c]  －－arr＝[0]</span><br><span class="line">＃字符串连接</span><br><span class="line">－－alert('abc'+1+2+'cde') －－括号优先级</span><br><span class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">title</span>&gt;</span>简易节气日历<span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line"><span class="built_in">window</span>.onload=<span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;    </span><br><span class="line">    <span class="comment">// arr数组定义</span></span><br><span class="line">    <span class="keyword">var</span> arr=[</span><br><span class="line">       <span class="string">'一月份春节元宵节'</span>,<span class="string">'二月份情人节'</span>,<span class="string">'三月份妇女节'</span>,<span class="string">'四月份清明节'</span>,</span><br><span class="line">       <span class="string">'五月份端午节'</span>,<span class="string">'六月份儿童节'</span>,<span class="string">'七月份建军节'</span>,<span class="string">'八月份中秋节'</span>,</span><br><span class="line">       <span class="string">'九月份重阳节'</span>,<span class="string">'十月份国庆节'</span>,<span class="string">'十一月份万圣节'</span>,<span class="string">'十二月份圣诞节'</span></span><br><span class="line">    ];</span><br><span class="line">    <span class="keyword">var</span> oTab=<span class="built_in">document</span>.getElementById(<span class="string">'switchTab'</span>);</span><br><span class="line">    <span class="keyword">var</span> oLi=oTab.getElementsByTagName(<span class="string">'li'</span>);</span><br><span class="line">    <span class="keyword">var</span> oText=oTab.getElementsByTagName(<span class="string">'div'</span>)[<span class="number">0</span>];  </span><br><span class="line">    <span class="keyword">for</span>( <span class="keyword">var</span> i=<span class="number">0</span>;i&lt;oLi.length;i++)</span><br><span class="line">    &#123;</span><br><span class="line">      oLi[i].index=i;</span><br><span class="line">      oLi[i].onmouseover=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">           <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;oLi.length;i++)&#123;</span><br><span class="line">                 oLi[i].className=<span class="string">''</span>;</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="keyword">this</span>.className=<span class="string">'active'</span>;</span><br><span class="line">           oText.innerHTML=<span class="string">'&lt;h6&gt;'</span>+(<span class="keyword">this</span>.index+<span class="number">1</span>)+<span class="string">'月节气&lt;/h6&gt;&lt;p&gt;'</span>+arr[<span class="keyword">this</span>.index]+<span class="string">'&lt;/p&gt;'</span>;</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"switchTab"</span> <span class="attribute">class</span>=<span class="value">"calendar"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"clear"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"active"</span>&gt;</span><span class="tag">&lt;<span class="title">h1</span>&gt;</span>1<span class="tag">&lt;/<span class="title">h1</span>&gt;</span><span class="tag">&lt;<span class="title">p</span>&gt;</span>JAN<span class="tag">&lt;/<span class="title">p</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">h1</span>&gt;</span>2<span class="tag">&lt;/<span class="title">h1</span>&gt;</span><span class="tag">&lt;<span class="title">p</span>&gt;</span>FER<span class="tag">&lt;/<span class="title">p</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">h1</span>&gt;</span>3<span class="tag">&lt;/<span class="title">h1</span>&gt;</span><span class="tag">&lt;<span class="title">p</span>&gt;</span>MAR<span class="tag">&lt;/<span class="title">p</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">h1</span>&gt;</span>4<span class="tag">&lt;/<span class="title">h1</span>&gt;</span><span class="tag">&lt;<span class="title">p</span>&gt;</span>APR<span class="tag">&lt;/<span class="title">p</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">h1</span>&gt;</span>5<span class="tag">&lt;/<span class="title">h1</span>&gt;</span><span class="tag">&lt;<span class="title">p</span>&gt;</span>MAY<span class="tag">&lt;/<span class="title">p</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">h1</span>&gt;</span>6<span class="tag">&lt;/<span class="title">h1</span>&gt;</span><span class="tag">&lt;<span class="title">p</span>&gt;</span>JUN<span class="tag">&lt;/<span class="title">p</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">h1</span>&gt;</span>7<span class="tag">&lt;/<span class="title">h1</span>&gt;</span><span class="tag">&lt;<span class="title">p</span>&gt;</span>JUL<span class="tag">&lt;/<span class="title">p</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">h1</span>&gt;</span>8<span class="tag">&lt;/<span class="title">h1</span>&gt;</span><span class="tag">&lt;<span class="title">p</span>&gt;</span>AUG<span class="tag">&lt;/<span class="title">p</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">h1</span>&gt;</span>9<span class="tag">&lt;/<span class="title">h1</span>&gt;</span><span class="tag">&lt;<span class="title">p</span>&gt;</span>SEP<span class="tag">&lt;/<span class="title">p</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">h1</span>&gt;</span>10<span class="tag">&lt;/<span class="title">h1</span>&gt;</span><span class="tag">&lt;<span class="title">p</span>&gt;</span>OCT<span class="tag">&lt;/<span class="title">p</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">h1</span>&gt;</span>11<span class="tag">&lt;/<span class="title">h1</span>&gt;</span><span class="tag">&lt;<span class="title">p</span>&gt;</span>NOV<span class="tag">&lt;/<span class="title">p</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">h1</span>&gt;</span>12<span class="tag">&lt;/<span class="title">h1</span>&gt;</span><span class="tag">&lt;<span class="title">p</span>&gt;</span>DEC<span class="tag">&lt;/<span class="title">p</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"txt"</span>&gt;</span><span class="tag">&lt;<span class="title">h6</span>&gt;</span><span class="tag">&lt;/<span class="title">h6</span>&gt;</span><span class="tag">&lt;<span class="title">p</span>&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/10/24/bpack-pages/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          JavaScript的闭包特性,给循环中的对象添加事件
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/10/21/tab-pages/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">选项卡实例,通过For循环,This获取当前事件</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="calendar-pages" data-title="简易日历arr数组、innerHTML、字符串" data-url="http://jack0624.github.io/2015/10/22/calendar-pages/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+<section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'jack0624'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 Jack Wang
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
