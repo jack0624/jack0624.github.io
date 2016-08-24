@@ -1510,15 +1510,6 @@ a {
   padding: 0 0.3em;
   border: none;
 }
-.article-entry pre {
-  color: #fff;
-}
-.article-entry pre code {
-  background: none;
-  text-shadow: none;
-  padding: 0;
-  color: #fff;
-}
 .article-entry .highlight {
   -webkit-border-radius: 4px;
   border-radius: 4px;
