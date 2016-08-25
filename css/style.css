@@ -206,6 +206,7 @@ a {
 }
 #container #mobile-nav {
   display: none;
+  background: #000;
 }
 #container #mobile-nav .overlay {
   height: 110px;
@@ -494,8 +495,6 @@ a {
   color: #eaeaea;
 }
 #header .profilepic {
-  text-align: center;
-  display: block;
   border: 5px solid #fff;
   -webkit-border-radius: 300px;
   border-radius: 300px;
@@ -504,7 +503,7 @@ a {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  background: #f00;
+  background: #e6e6e6;
   -webkit-transition: all 0.2s ease-in;
   display: -webkit-box;
   -webkit-box-orient: horizontal;
@@ -559,7 +558,7 @@ a {
   cursor: pointer;
   text-transform: uppercase;
   float: none;
-  min-height: 150px;
+  height: 150px;
   text-align: center;
   display: -webkit-box;
   -webkit-box-orient: horizontal;
@@ -1855,7 +1854,7 @@ pre .css ~ * .id {
 .switch-btn .icon {
   height: 32px;
   width: 32px;
-  background: #f00;
+  background: #cecece;
   -webkit-border-radius: 100px;
   border-radius: 100px;
   position: relative;
@@ -1910,7 +1909,7 @@ pre .css ~ * .id {
   position: absolute;
   width: 4px;
   height: 4px;
-  background: #ccc;
+  background: #000;
   bottom: -8px;
   left: 4px;
   -webkit-border-radius: 60px;
